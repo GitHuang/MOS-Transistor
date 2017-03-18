@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 
 phi_t = 0.0259 # T=300 K, the thermal voltage is 0.0259eV
-N_A = 5E15 # the dopant density of the p-type substrate per cm^-3
+N_A = 5E17 # the dopant density of the p-type substrate per cm^-3
 n_i = 1.5E10 # the carrier density of intirnsic Si per cm^-3
 tox = 2 # the thickness of the SiO2  unit: nm
 V_FB = -0.8 # the flatband voltage is -0.8V
@@ -80,7 +80,7 @@ plt.savefig('bulk capacitance vs Surface Potential.pdf')
 
 
 # Plot C_gb vs VGB
-psi = np.arange(-0.6*phi_F, 2*phi_F+10*phi_t, 0.01*phi_F)
+psi = np.arange(-4*phi_t, 2*phi_F+6*phi_t, 0.01*phi_F)
 C_c = C_c_psi(phi_F,phi_t,gamma0,Cox,psi)
 C_b = C_b_psi(phi_F,phi_t,gamma0,Cox,psi)
 C_i = C_i_psi(phi_F,phi_t,gamma0,Cox,psi)
