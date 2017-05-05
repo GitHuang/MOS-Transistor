@@ -18,8 +18,8 @@ tox = 2 # the thickness of the SiO2  unit: nm
 V_FB = -0.8 # the flatband voltage is -0.8V
 kox = 3.9 # dieletric for SiO2
 epsilon0 = 8.854E-3  # fF/um
-Cox = kox*epsilon0/tox*10E-4 # the unit is F/cm^2, ie. F per cm^2
-gamma0 = 0.53*(tox/10)*np.sqrt(N_A*10E-17) # Body effect gammma0 = sqrt(2q*epsilon*N_A)/Cox
+Cox = kox*epsilon0/tox*1E-4 # the unit is F/cm^2, ie. F per cm^2
+gamma0 = 0.53*(tox/10)*np.sqrt(N_A*1E-17) # Body effect gammma0 = sqrt(2q*epsilon*N_A)/Cox
 phi_F = phi_t*np.log(N_A/n_i)
 
 def C_c_psi(phi_F,phi_t,gamma0,Cox,psi):  # Calculation of total bulk capacitance C_c

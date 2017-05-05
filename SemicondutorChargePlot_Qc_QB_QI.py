@@ -27,8 +27,8 @@ kox = 3.9 # dieletric for SiO2
 epsilon0 = 8.854E-3  # fF/um
 
 
-Cox = kox*epsilon0/tox*10E-4 # the unit is F/cm^2, ie. F per cm^2
-gamma0 = 0.53*(tox/10)*np.sqrt(N_A*10E-17) # Body effect gammma0 = sqrt(2q*epsilon*N_A)/Cox
+Cox = kox*epsilon0/tox*1E-4 # the unit is F/cm^2, ie. F per cm^2
+gamma0 = 0.53*(tox/10)*np.sqrt(N_A*1E-17) # Body effect gammma0 = sqrt(2q*epsilon*N_A)/Cox
 phi_F = phi_t*np.log(N_A/n_i)
 
 def Qc_psi(phi_F,phi_t,gamma0,Cox,psi):
@@ -56,9 +56,9 @@ plt.axhline(y=0, color='k')
 plt.axvline(x=0, color='k')
 plt.ylabel(r'$Q(C/cm^2)$', fontsize=18, fontweight='bold')
 plt.xlabel(r"$\psi_s (V)$", fontsize=18, fontweight='bold')
-plt.text(phi_F, -0.000005, r'$\phi_F$', fontsize=15)
-plt.text(2*phi_F, -0.000005, r'$2\phi_F$', fontsize=15)
-plt.text(2*phi_F+6*phi_t, -0.000005, r'$\phi_0$', fontsize=15)
+plt.text(phi_F, -0.0000002, r'$\phi_F$', fontsize=15)
+plt.text(2*phi_F, -0.0000002, r'$2\phi_F$', fontsize=15)
+plt.text(2*phi_F+6*phi_t, -0.0000002, r'$\phi_0$', fontsize=15)
 plt.gcf().subplots_adjust(left=0.2)
 plt.legend(['$|Q_B|$', '$|Q_I|$','$|Q_C|$'],loc = 'upper center',fontsize=15)
 plt.savefig('Qc QI QB vs Surface Potential.pdf')
@@ -80,11 +80,11 @@ plt.grid()
 plt.axhline(y=0, color='k')
 plt.ylabel(r'$|Q_I|\ (C/cm^2)$', fontsize=18, fontweight='bold')
 plt.xlabel(r"$V_{GB} (V)$", fontsize=18, fontweight='bold')
-plt.text(VL0 , -0.000005, r'$V_L$', fontsize=15)
-plt.text(VM0*0.8, -0.000005, r'$V_M$', fontsize=15)
-plt.text(VT0*1.1, -0.000005, r'$V_{T0}$', fontsize=15)
-plt.text(VH0 , -0.000005, r'$V_H$', fontsize=15)
-plt.legend(['$|Q_I|(exact)$','$|Q_I|(approx)$'],loc = 'left center',fontsize=15)
+plt.text(VL0 , -0.0000002, r'$V_L$', fontsize=15)
+plt.text(VM0*0.8, -0.0000002, r'$V_M$', fontsize=15)
+plt.text(VT0*1.1, -0.0000002, r'$V_{T0}$', fontsize=15)
+plt.text(VH0 , -0.0000002, r'$V_H$', fontsize=15)
+plt.legend(['$|Q_I|(exact)$','$|Q_I|(approx)$'],loc = 'center left',fontsize=15)
 plt.gcf().subplots_adjust(left=0.2)
 plt.savefig('QI vs External Bias VGB.pdf')
 
